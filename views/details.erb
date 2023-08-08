@@ -5,3 +5,8 @@
   <br/>
   Added at <%= @row[1] %>
 </p>
+<h4>Comments</h4>
+  <form action="/details/<%= @row[0] %>" method="post" role="form">
+    <textarea class="form-control" rows="6" placeholder="type coments text here" name="coment"></textarea></br>
+    <button type="submit" class="btn btn-info btn-lg">AddComment</button>
+  </form>
