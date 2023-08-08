@@ -1,0 +1,10 @@
+<h2>Latest Posts:</h2><br/>
+<% @results.each do |post| %>
+  <p>
+    <%= post[2] %>
+  </p>
+  Added at: <%= post[1] %>
+  <br/>
+  <a href="/post/<%= post[0]%>">Comments</a>
+  <hr/>
+<% end %>
