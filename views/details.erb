@@ -5,7 +5,16 @@
   <br/>
   Added at <%= @row[1] %>
 </p>
+<br/>
+<br/>
 <h4>Comments</h4>
+<% @comments.each do |item| %>
+    <%= item[2] %><br/>
+    Added at <%= item[1] %><br/><br/>
+<% end %>
+
+<br/>
+<br/>
   <form action="/details/<%= @row[0] %>" method="post" role="form">
     <textarea class="form-control" rows="6" placeholder="type coments text here" name="coment"></textarea></br>
     <button type="submit" class="btn btn-info btn-lg">AddComment</button>
